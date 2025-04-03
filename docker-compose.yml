@@ -1,0 +1,17 @@
+services:
+  glow-frontend:
+    build: .
+    container_name: glow-frontend
+    command: yarn dev -p 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/glow
+      - /usr/src/glow/node_modules
+    networks:
+      - mynetwork
+    restart: always
+
+networks:
+  mynetwork:
+    driver: bridge

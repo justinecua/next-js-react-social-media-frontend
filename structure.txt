@@ -1,0 +1,81 @@
+your-social-app/
+├── public/                      # Static files (images, icons, etc.)
+│    ├── avatars/                # User profile images
+│    └── favicon.ico             # Favicon
+│
+├── src/                         # Main source code
+│   ├── app/                     # Next.js App Router (page routes)
+│   │   ├── layout.tsx           # Main layout (Navbar, Footer)
+│   │   ├── page.tsx             # Home page (http://localhost:3000/)
+│   │   │
+│   │   ├── accounts/            # Auth pages
+│   │   │    ├── login/          # Login page
+│   │   │    │    └── page.tsx
+│   │   │    ├── register/       # Register page
+│   │   │    │    └── page.tsx
+│   │   │    └── profile/        # Profile page
+│   │   │         ├── page.tsx
+│   │   │         └── edit/
+│   │   │              └── page.tsx
+│   │   │
+│   │   ├── posts/               # Post module
+│   │   │    ├── page.tsx        # Main post feed
+│   │   │    └── [id]/           # Dynamic post (http://yourapp.com/posts/123)
+│   │   │         └── page.tsx
+│   │   │
+│   │   ├── notifications/       # Notifications
+│   │   │    └── page.tsx
+│   │   │
+│   │   └── settings/            # User settings
+│   │        └── page.tsx
+│   │
+│   ├── components/              # Reusable UI components
+│   │   ├── layout/              # Page layouts (Navbar, Footer)
+│   │   │    ├── Navbar.tsx
+│   │   │    └── Footer.tsx
+│   │   │
+│   │   ├── ui/                  # UI elements (Buttons, Inputs)
+│   │   │    ├── Button.tsx
+│   │   │    └── Input.tsx
+│   │   │
+│   │   ├── posts/               # Post-related components
+│   │   │    ├── PostCard.tsx
+│   │   │    └── PostForm.tsx
+│   │   │
+│   │   └── notifications/       # Notification components
+│   │        └── NotificationList.tsx
+│   │
+│   ├── features/                # Business logic (Redux, API, Hooks)
+│   │   ├── auth/                # Authentication
+│   │   │    ├── api.ts          # Auth API calls (Login, Logout)
+│   │   │    ├── hooks.ts        # Custom hooks (useAuth, useUser)
+│   │   │    └── slice.ts        # Redux slice
+│   │   │
+│   │   ├── posts/               # Posts feature
+│   │   │    ├── api.ts          # CRUD post API calls
+│   │   │    ├── hooks.ts        # usePosts hook
+│   │   │    └── slice.ts        # Redux slice
+│   │   │
+│   │   └── notifications/       # Notifications
+│   │        ├── api.ts
+│   │        ├── hooks.ts
+│   │        └── slice.ts
+│   │
+│   ├── lib/                     # Utilities (API client, helpers)
+│   │   ├── api.ts               # Axios instance
+│   │   ├── validation.ts        # Form validation (Zod or Yup)
+│   │   └── constants.ts         # App-wide constants
+│   │
+│   ├── store/                   # Redux store
+│   │   ├── index.ts             # Store setup
+│   │   └── rootReducer.ts       # Root reducer
+│   │
+│   └── styles/                  # Global and component styles
+│        ├── globals.css         # Main Tailwind CSS
+│        └── components.css      # Custom component styles (optional)
+│
+├── .env.local                   # Environment variables
+├── next.config.mjs              # Next.js configuration
+├── postcss.config.mjs           # PostCSS config (for Tailwind)
+├── tailwind.config.ts           # Tailwind configuration
+└── tsconfig.json                # TypeScript configuration
